@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="calendar" class="app.Calendar">
+        <property name="month" value="2016-12"/>
+        <property name="today" value="2016-12-12"/>
+        <property name="weekend">
+            <set>
+                <value>SUNDAY</value>
+                <value>SATURDAY</value>
+            </set>
+        </property>
+    </bean>
+    
+    <!--  <bean id="calendar" class="app.HtmlView">
+          <constructor-arg type="app.Calendar"><value>calendar</value></constructor-arg>
+
+      <bean id="consoleView" class="app.ConsoleView">
+          <property name="calendar">
+              <bean id="calendar" class="app.Calendar"/>
+          </property>
+      </bean>
+
+      <bean id="htmlView" class="app.HtmlView">
+          <property name="calendar">
+              <bean id="calendar" class="app.Calendar"/>
+          </property>
+
+      </bean>-->
+
+</beans>
